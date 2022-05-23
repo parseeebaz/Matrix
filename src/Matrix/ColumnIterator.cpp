@@ -6,11 +6,15 @@
 #include "ConstColumnIterator.h"
 #include "Matrix.h"
 
+
 Matrix::ColumnIterator::ColumnIterator(Matrix* matrix, int col) {
+
 
 }
 
+
 Matrix::ColumnIterator::operator ConstColumnIterator() const {
+
 }
 
 Matrix::ConstVectorRef Matrix::ColumnIterator::operator*() const {
