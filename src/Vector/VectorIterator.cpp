@@ -12,6 +12,10 @@ Matrix::VectorIterator::VectorIterator(BaseVector* vector, int pos) {
 
 Matrix::VectorIterator::operator ConstVectorIterator() const {
 
+
+
+
+  //LOL
 }
 
 Matrix::VectorIterator::value_type& Matrix::VectorIterator::operator*() {
