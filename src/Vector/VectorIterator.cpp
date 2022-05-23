@@ -5,7 +5,10 @@
 #include "VectorIterator.h"
 #include "ConstColumnIterator.h"
 
-Matrix::VectorIterator::VectorIterator(BaseVector* vector, int pos) {}
+Matrix::VectorIterator::VectorIterator(BaseVector* vector, int pos) {
+  auto iterator = vector->begin();
+  iterator += pos;
+}
 
 Matrix::VectorIterator::operator ConstVectorIterator() const {
 
