@@ -18,8 +18,6 @@ namespace Matrix {
     using reference = value_type&;
     using iterator_category = std::random_access_iterator_tag;
 
-    pointer getPtr();
-
     //create an iterator over the given vector starting at the specified position
     VectorIterator(BaseVector* vector, int pos);
     virtual ~VectorIterator() = default;

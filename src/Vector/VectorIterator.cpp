@@ -5,10 +5,6 @@
 #include "VectorIterator.h"
 #include "ConstColumnIterator.h"
 
-pointer getPtr(){
-  return myPos;
-}
-
 Matrix::VectorIterator::VectorIterator(BaseVector* vector, int pos) {
   myVec = vector;
   myPos = pos;
@@ -85,28 +81,28 @@ bool Matrix::VectorIterator::operator!=(const VectorIterator& rhs) const {
 }
 
 bool Matrix::VectorIterator::operator<(const VectorIterator& rhs) const {
-  if(rhs.getPtr() > myPos){
+  if(rhs* > this*){
     return true;
   }
   return false;
 }
 
 bool Matrix::VectorIterator::operator<=(const VectorIterator& rhs) const {
-  if(rhs.getPtr() >= myPos){
+  if(rhs* >= this*){
     return true;
   }
   return false;
 }
 
 bool Matrix::VectorIterator::operator>(const VectorIterator& rhs) const {
-  if(rhs.getPtr() < myPos){
+  if(rhs* < this*){
     return true;
   }
   return false;
 }
 
 bool Matrix::VectorIterator::operator>=(const VectorIterator& rhs) const {
-  if(rhs.getPtr() <= myPos){
+  if(rhs* <= this*){
     return true;
   }
   return false;
