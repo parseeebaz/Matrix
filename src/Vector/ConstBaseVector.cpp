@@ -15,7 +15,7 @@ Matrix::ConstVectorIterator Matrix::ConstBaseVector::end() const {
 }
 
 Matrix::Vector Matrix::ConstBaseVector::operator-() const {
-
+  //reverse direction of vector (if positive make negative)
 }
 
 Matrix::Vector Matrix::ConstBaseVector::operator+(const ConstBaseVector& rhs) {
