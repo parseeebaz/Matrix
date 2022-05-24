@@ -67,7 +67,8 @@ namespace Matrix {
     bool operator>=(const VectorIterator& rhs) const;
 
    private:
-
+    vector<value_type> myVec;
+    pointer myPos;
   };
 }
 
