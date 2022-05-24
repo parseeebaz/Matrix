@@ -60,7 +60,7 @@ namespace Matrix {
   //scalar + vector
   Vector operator+(const ConstBaseVector::value_type& lhs, const ConstBaseVector& rhs);
 
-  //scalar + vector
+  //scalar - vector
   Vector operator-(const ConstBaseVector::value_type& lhs, const ConstBaseVector& rhs);
 
   //scalar * vector
