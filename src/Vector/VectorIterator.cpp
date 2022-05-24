@@ -5,6 +5,10 @@
 #include "VectorIterator.h"
 #include "ConstColumnIterator.h"
 
+pointer getPtr(){
+  return myPos;
+}
+
 Matrix::VectorIterator::VectorIterator(BaseVector* vector, int pos) {
   myVec = vector;
   myPos = pos;
@@ -15,51 +19,57 @@ Matrix::VectorIterator::operator ConstVectorIterator() const {
 }
 
 Matrix::VectorIterator::value_type& Matrix::VectorIterator::operator*() {
-
+  return *myPos;
 }
 
 const Matrix::VectorIterator::value_type& Matrix::VectorIterator::operator*() const {
 
 }
 
+Matrix::VectorIterator::value_type& Matrix::VectorIterator::operator[](int offset) {
+  return myVec.at(myPos + offset);
+}
+
 const Matrix::VectorIterator::value_type& Matrix::VectorIterator::operator[](int offset) const {
 
 }
 
-Matrix::VectorIterator::value_type& Matrix::VectorIterator::operator[](int offset) {
-
-}
-
 Matrix::VectorIterator& Matrix::VectorIterator::operator++() {
-
+  ++myPos;
+  return this*;
 }
 
 const Matrix::VectorIterator Matrix::VectorIterator::operator++(int) {
-
+  VectorIterator temp = *this;
+  ++(*this);
+  return temp;
 }
 
 Matrix::VectorIterator& Matrix::VectorIterator::operator--() {
-
+  --myPos;
+  return this*;
 }
 
 const Matrix::VectorIterator Matrix::VectorIterator::operator--(int) {
-
+  VectorIterator temp = *this;
+  --(*this);
+  return temp;
 }
 
 Matrix::VectorIterator& Matrix::VectorIterator::operator+=(int amount) {
-  myPos + amount;
+  return myPos + amount;
 }
 
 Matrix::VectorIterator Matrix::VectorIterator::operator+(int amount) const {
-  myPos + amount;
+  return myPos + amount;
 }
 
 Matrix::VectorIterator& Matrix::VectorIterator::operator-=(int amount) {
-  myPos - amount;
+  return myPos - amount;
 }
 
 Matrix::VectorIterator Matrix::VectorIterator::operator-(int amount) const {
-  myPos - amount;
+  return myPos - amount;
 }
 
 Matrix::VectorIterator::difference_type Matrix::VectorIterator::operator-(const VectorIterator& rhs) {
@@ -68,7 +78,6 @@ Matrix::VectorIterator::difference_type Matrix::VectorIterator::operator-(const 
 
 bool Matrix::VectorIterator::operator==(const VectorIterator& rhs) const {
 
-
 }
 
 bool Matrix::VectorIterator::operator!=(const VectorIterator& rhs) const {
@@ -76,28 +85,28 @@ bool Matrix::VectorIterator::operator!=(const VectorIterator& rhs) const {
 }
 
 bool Matrix::VectorIterator::operator<(const VectorIterator& rhs) const {
-  if(rhs* > myPos){
+  if(rhs.getPtr() > myPos){
     return true;
   }
   return false;
 }
 
 bool Matrix::VectorIterator::operator<=(const VectorIterator& rhs) const {
-  if(rhs* >= myPos){
+  if(rhs.getPtr() >= myPos){
     return true;
   }
   return false;
 }
 
 bool Matrix::VectorIterator::operator>(const VectorIterator& rhs) const {
-  if(rhs* < myPos){
+  if(rhs.getPtr() < myPos){
     return true;
   }
   return false;
 }
 
 bool Matrix::VectorIterator::operator>=(const VectorIterator& rhs) const {
-  if(rhs* <= myPos){
+  if(rhs.getPtr() <= myPos){
     return true;
   }
   return false;
