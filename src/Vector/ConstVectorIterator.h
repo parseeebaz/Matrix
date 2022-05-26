@@ -24,6 +24,8 @@ namespace Matrix {
     ConstVectorIterator(const ConstVectorIterator& orig) = default;
     virtual ~ConstVectorIterator() = default;
 
+    Matrix::Vector getVec();
+
     //return a reference to the element you are at
     const value_type& operator*() const;
 
@@ -65,7 +67,8 @@ namespace Matrix {
     bool operator>=(const ConstVectorIterator& rhs) const;
 
    private:
-
+    Vector myVec();
+    pointer myPos;
   };
 }
 

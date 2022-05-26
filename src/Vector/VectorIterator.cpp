@@ -10,6 +10,10 @@ Matrix::VectorIterator::VectorIterator(BaseVector* vector, int pos) {
   myPos = pos;
 }
 
+Matrix::Vector getVec(){
+  return myVec;
+}
+
 Matrix::VectorIterator::operator ConstVectorIterator() const {
 
 }
@@ -53,31 +57,46 @@ const Matrix::VectorIterator Matrix::VectorIterator::operator--(int) {
 }
 
 Matrix::VectorIterator& Matrix::VectorIterator::operator+=(int amount) {
-  return myPos + amount;
+  myPos + amount;
+  return this;
 }
 
 Matrix::VectorIterator Matrix::VectorIterator::operator+(int amount) const {
-  return myPos + amount;
+  myPos + amount;
+  return this;
 }
 
 Matrix::VectorIterator& Matrix::VectorIterator::operator-=(int amount) {
-  return myPos - amount;
+  myPos - amount;
+  return this;
 }
 
 Matrix::VectorIterator Matrix::VectorIterator::operator-(int amount) const {
-  return myPos - amount;
+  myPos - amount;
+  return this;
 }
 
 Matrix::VectorIterator::difference_type Matrix::VectorIterator::operator-(const VectorIterator& rhs) {
-  return (myPos - rhs*);
+  return (myPos - rhs);
 }
 
 bool Matrix::VectorIterator::operator==(const VectorIterator& rhs) const {
-
+  if(this->getVec() == rhs.getVec()){
+    if(rhs* == this*){
+      return true;
+    }
+  }
+  return false;
 }
 
 bool Matrix::VectorIterator::operator!=(const VectorIterator& rhs) const {
-
+  if(this->getVec() != rhs.getVec()){
+    return true;
+  }
+  if(rhs* != this*){
+    return true;
+  }
+  return false;
 }
 
 bool Matrix::VectorIterator::operator<(const VectorIterator& rhs) const {

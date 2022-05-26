@@ -21,6 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="bd683790-c7d8-4e0c-ab4c-4bf7be98c0f1" name="Changes" comment="comments2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector/ConstBaseVector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector/ConstBaseVector.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector/ConstVectorIterator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector/ConstVectorIterator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector/ConstVectorIterator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector/ConstVectorIterator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector/VectorIterator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector/VectorIterator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector/VectorIterator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector/VectorIterator.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +73,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Google Test.MatrixTester">
-    <configuration name="MatrixTester" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MatrixBuilder" TARGET_NAME="MatrixTester" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MatrixBuilder" RUN_TARGET_NAME="MatrixTester" TEST_MODE="SUITE_TEST">
+    <configuration name="MatrixTester" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MatrixBuilder" TARGET_NAME="MatrixTester" RUN_TARGET_PROJECT_NAME="MatrixBuilder" RUN_TARGET_NAME="MatrixTester" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -137,7 +142,11 @@
       <workItem from="1653343553675" duration="4380000" />
       <workItem from="1653349961178" duration="3394000" />
       <workItem from="1653429471797" duration="7030000" />
-      <workItem from="1653543259538" duration="2000" />
+      <workItem from="1653543259538" duration="2586000" />
+      <workItem from="1653545996308" duration="325000" />
+      <workItem from="1653546343769" duration="93000" />
+      <workItem from="1653546449198" duration="94000" />
+      <workItem from="1653546556228" duration="3180000" />
     </task>
     <task id="LOCAL-00001" summary="commit attempt">
       <created>1653344119351</created>
@@ -195,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653436226455</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="comments2">
+      <created>1653543597511</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1653543597511</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
